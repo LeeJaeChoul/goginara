@@ -13,3 +13,33 @@
 .g-mt-40 { margin-top: 40px; }
 .g-mt-50 { margin-top: 50px; }
 .g-mt-100 { margin-top: 100px; }
+
+.g-mr-10 { margin-right: 10px; }
+.g-ml-10 { margin-left: 10px; }
+
+.product-name {
+    color: #72c02c;
+}
+.gogi-item {
+    padding-top: 50px;
+	margin-right: -1px;
+	padding-bottom: 30px;
+	transition: all .3s ease-in-out;
+}
+.gogi-item:hover {
+    box-shadow: none;
+	padding-top: 35px;
+	transition: all .2s ease-in;
+}
+
+.item-information {
+    border: 0.5px solid #bbb;
+}
+.item-information:hover {
+    background-color: #f4f5f7;
+    cursor: pointer;
+}
+
+.banner-img {
+    max-width:100%;
+}

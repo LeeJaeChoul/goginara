@@ -13,7 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.min
+//= require jquery-migrate.min
 //= require bootstrap.min
+//= require smoothScroll
+//= require jquery.parallax
 //= require owl-carousel
-//= require turbolinks
+//= require app
+//= require custom
 //= require_tree .
+
+
+jQuery(document).ready(function() {
+			App.init();
+		});
