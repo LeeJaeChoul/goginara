@@ -1,0 +1,35 @@
+<div class="container">
+<%= render "layouts/header" %>
+	<div class="row text-center g-mt-20 g-mb-20">
+	  <div class="col-md-6 col-md-offset-3 border-box">
+		<h2>회원가입</h2>
+	
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	 	 <%= devise_error_messages! %>
+		
+			<label class="input login-input g-mt-20">
+	      <div class="input-group">
+	      	<span class="input-group-addon"><i class="fa fa-user"></i></span>
+	      	<%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "이메일" %>
+	    	</div>
+	  	</label>
+	  	<label class="input login-input no-border-top g-mt-20">
+		    <div class="input-group">
+		      <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+		      <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "비밀번호(6자리 이상의 비밀번호입력)" %>
+		    </div>
+	  	</label>
+	  	<label class="input login-input no-border-top g-mt-20">
+		    <div class="input-group">
+		      <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+		      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "비밀번호 확인" %>
+		    </div>
+	  	</label>
+	  	<div class="actions g-mt-20">
+	    	<%= f.submit "가입하기", class: "btn-u btn-devise margin-bottom-20" %>
+	  	</div>
+	  </div>
+	</div>
+	<% end %>
+<%= render "layouts/footer" %>
+</div>

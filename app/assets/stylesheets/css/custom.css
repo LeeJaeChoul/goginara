@@ -18,22 +18,16 @@
 .g-ml-10 { margin-left: 10px; }
 
 .product-name {
-    color: #72c02c;
+    color: rgb(95, 74, 11);;
 }
 .gogi-item {
     padding-top: 50px;
 	margin-right: -1px;
 	padding-bottom: 30px;
-	transition: all .3s ease-in-out;
+	
 }
-.gogi-item:hover {
-    box-shadow: none;
-	padding-top: 35px;
-	transition: all .2s ease-in;
-}
-
 .item-information {
-    border: 0.5px solid #bbb;
+    border: 1px solid #bbb;
 }
 .item-information:hover {
     background-color: #f4f5f7;
@@ -42,4 +36,81 @@
 
 .banner-img {
     max-width:100%;
+}
+
+.rgba-banner-position {
+  position: relative;
+}
+
+.rgba-banner {
+  top: 50px;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 8px;
+  font-weight: 600;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shop-rgba-orange {
+  background: rgba(248, 191, 32, 0.8);
+}
+.btn-p-buy {
+  margin-top: 5px;
+	font-size: 25px;
+	padding: 10px 25px;
+	width: 100%;
+	background: #5F4A0B;
+}
+
+.btn-p-buy:hover {
+	background: rgba(95, 74, 11, 0.8);
+}
+
+.btn-devise {
+	margin-top: 5px;
+	font-size: 15px;
+	padding: 10px 25px;
+	width: 100%;
+	background: #5F4A0B;
+}
+
+.btn-devise:hover {
+	background: rgba(95, 74, 11, 0.8);
+}
+
+.product-service .product-service-heading {
+	padding: 10px 0;
+	text-align: center;
+	background-color: rgb(242, 208, 73);
+}
+
+.product-service .product-service-heading i {
+	color: #fff;
+	font-size: 40px;
+}
+
+.product-service .product-service-in {
+	padding: 15px 30px;
+	text-align: center;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.product-service .product-service-in h3 {
+	color: #555;
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.product-service .product-service-in a {
+	color: #c9253c;
+	font-size: 14px;
+	font-weight: 400;
+}
+.border-box{
+	border: 1px solid #bbb;
 }

@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 gem 'devise'
 gem "font-awesome-rails"
+gem 'foundation-rails'
+gem "authority"
+gem "devise"
+gem "rolify"
+gem 'gmaps4rails'
+gem 'recaptcha', require: "recaptcha/rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

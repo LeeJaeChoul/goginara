@@ -1,77 +1,47 @@
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header"><strong>한우 인기상품</strong></h1>
-            </div>
-        </div>
-        <!-- /.row -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><strong>한우 인기상품</strong></h1>
+  </div>
+</div>
+<!-- /.row -->
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "gogi.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                <h3 class="product-name g-ml-10">한우 1++ 살치살</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>59,000</h3>
-                </div>
-            </div>
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "gogi2.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                	<h3 class="product-name g-ml-10">한우 1++ LA갈비</h3>
-                	<h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>59,000</h3>
-                </div>
-            </div>
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "gogi3.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-	                <h3 class="product-name g-ml-10">한우 1++ 종합세트</h3>
-	                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>59,000</h3>
-                </div>
-            </div>
-        </div><br>
-        <!-- /.row -->
+<!-- Projects Row -->
+<div class="row">
+  <% @cow.each do |cow| %>
+  <% break if cow.id > 3 %>
+  <div class="col-md-4 gogi-item" onClick="location.href='/cows/<%= cow.id %>'" style="cursor: pointer;">
+    <img class="img-responsive" src='<%= asset_path "gogi#{cow.id}.jpg" %>' alt="">
+    <div class="item-information">
+      <h2 class="product-name g-ml-10"><%= cow.title %></h2>
+      <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i><%= cow.price %></h3>
+    </div>
+  </div>
+  
+  <% end %>
+</div><br>
+<!-- /.row -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><strong>한돈 인기상품</strong></h1>
+  </div>
+</div>
+<!-- /.row -->
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header"><strong>한돈 인기상품</strong></h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "pork1.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                    <h3 class="product-name g-ml-10">한돈 목살 세트</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>29,900</h3>
-                </div>
-            </div>
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "pork2.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                    <h3 class="product-name g-ml-10">한돈 삼겹살 세트</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>29,900</h3>
-                </div>
-            </div>
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "pork3.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                    <h3 class="product-name g-ml-10">한돈 왕갈비 세트</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>35,000</h3>
-                </div>
-            </div>
-        </div><br>
+<!-- Projects Row -->
+<div class="row">
+  <% @pork.each do |pork| %>
+  <% break if pork.id > 3 %>
+  <div class="col-md-4 gogi-item" onClick="location.href='/porks/<%= pork.id %>'" style="cursor: pointer;">
+    <img class="img-responsive" src='<%= asset_path "pork#{pork.id}.jpg" %>' alt="">
+    <div class="item-information">
+      <h2 class="product-name g-ml-10"><%= pork.title %></h2>
+      <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i><%= pork.price %></h3>
+    </div>
+  </div>
+  
+  <% end %>
+</div><br>
+<!-- /.row -->
 
         <!-- Projects Row -->
         <div class="row">
@@ -108,3 +78,38 @@
                 </div>
             </div>
         </div>
+        
+			<!--=== Product Service ===-->
+			<!--<div class="row g-mt-100">-->
+			<!--	<div class="col-md-4 product-service">-->
+			<!--		<div class="product-service-heading">-->
+			<!--			<i class="fa fa-krw"></i>-->
+			<!--		</div>-->
+			<!--		<div class="product-service-in">-->
+			<!--			<h2>입금계좌 안내</h2>-->
+			<!--			<h3>농협: 111-22-3333</h3>-->
+			<!--			<h3>예금주: 이재철</h3>-->
+			<!--		</div>-->
+			<!--	</div>-->
+			<!--	<div class="col-md-4 product-service">-->
+			<!--		<div class="product-service-heading">-->
+			<!--			<i class="fa fa-truck"></i>-->
+			<!--		</div>-->
+			<!--		<div class="product-service-in">-->
+			<!--			<h2>배송안내</h2>-->
+			<!--			<h3>CJ대한통운택배</h3>-->
+			<!--			<h3>70,000원 이상 구매시 배송료 무료</h3>-->
+			<!--		</div>-->
+			<!--	</div>-->
+			<!--	<div class="col-md-4 product-service">-->
+			<!--		<div class="product-service-heading">-->
+			<!--			<i class="fa fa-map-o"></i>-->
+			<!--		</div>-->
+			<!--		<div class="product-service-in">-->
+			<!--			<h3>Free Returns</h3>-->
+			<!--			<p></p>-->
+			<!--			<a href="#">+Read More</a>-->
+			<!--		</div>-->
+			<!--	</div>-->
+			<!--</div><!--/end row-->
+			

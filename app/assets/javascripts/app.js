@@ -13,7 +13,7 @@ var App = function () {
 	// Fixed Header
 	function handleHeader() {
 		jQuery(window).scroll(function() {
-		  if (jQuery(window).scrollTop() > 100) {
+		  if (jQuery(window).scrollTop() > 150) {
 			jQuery('.header-fixed .header-sticky').addClass('header-fixed-shrink');
 		  } else {
 			jQuery('.header-fixed .header-sticky').removeClass('header-fixed-shrink');

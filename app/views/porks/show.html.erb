@@ -1,0 +1,35 @@
+<div class="container">
+  <%= render "layouts/header" %>
+  <div class="shop-product g-mt-50">
+		<div class="container">
+			<div class="row">
+			  <div><h1>상품 상세보기</h1><hr></div>
+				<div class="col-md-8 g-mb-50">
+				  <div>
+					  <img class="img-responsive" src='<%= asset_path "pork#{@pork.id}.jpg" %>' alt="">
+				  </div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="product-name">
+						<h1><b><%= @pork.title %></b></h1>
+					</div><!--/end shop product social-->
+
+					<p>농협에서 구입한 1++ 등급의한돈을<strong> 한 번 더 손질하여 </strong>기름기 적고 질 좋은 고기를 드리기 위해 고기나라는 항상 노력하고 있습니다.</p><br>
+          <div>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 제조사: <b><%= @pork.maker %></b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 원산지: <b><%= @pork.origin %></b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 중량: <b><%= @pork.weight %></b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 유통기한: <b><%= @pork.life %></b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 수령방법: <b>택배 / 방문수령</b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 가격: <b><%= @pork.price %>원</b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 배송비: <b>3,000원</b></p>
+					</div>
+					  <a href="#"><button type="button" class="btn-u btn-u-sea-shop btn-p-buy"><i class="fa fa-shopping-cart" aria-hidden="true"> 주문하기</i></button></a>
+				  
+				</div>
+			</div><!--/end row--><hr>
+		</div>
+	</div>
+<%= render "layouts/footer" %>
+</div>

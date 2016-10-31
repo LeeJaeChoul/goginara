@@ -1,8 +1,9 @@
 @import 'plugins/app';
 @import 'plugins/blocks';
 @import 'plugins/bootstrap.min';
+@import 'css/header-v4-centered-1';
 @import 'css/style';
-@import 'css/header-v6';
+// @import 'css/header-v6';
 @import 'plugins/animate';
 @import 'plugins/line-icons';
 @import 'plugins/font-awesome.min';
@@ -10,6 +11,7 @@
 @import 'css/page_about';
 @import 'css/footer-v2';
 @import 'css/custom';
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -25,4 +27,6 @@
  *
  *= require_tree .
  *= require_self
+//= require foundation_and_overrides
+
  */

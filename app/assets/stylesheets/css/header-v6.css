@@ -921,16 +921,18 @@
 		width: 100%;
 		height: auto;
 		z-index: 999;
-		position: fixed;
+		
 	}
 
 	.header-fixed .header-v6.header-fixed-shrink {
 		border-bottom: none;
 		box-shadow: 0 0 3px #bbb;
+		position: fixed;
 	}
 
 	.header-fixed .header-v6.header-fixed-shrink .navbar {
 		background: #fff;
+		position: fixed;
 	}
 
 	/*Navbar*/
@@ -1402,6 +1404,7 @@
 	/*Header Sticky*/
 	.header-v6.header-classic-white .navbar {
 		background: #fff;
+		border-bottom: 1px solid #e4e9f0;
 	}
 
 	/*Navbar*/

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :cows
+  resources :porks
+  devise_for :users
+  get 'contact' => 'goginara#contact'
   get 'goginara/index'
   root "goginara#index"
   # The priority is based upon order of creation: first created -> highest priority.
