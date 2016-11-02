@@ -7,7 +7,8 @@ class CreateCows < ActiveRecord::Migration
       t.string :weight
       t.string :life
       t.string :price
-
+      # t.references :user, index: true
+      
       t.timestamps null: false
     end
   end

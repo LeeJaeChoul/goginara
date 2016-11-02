@@ -2,12 +2,15 @@ source 'https://rubygems.org'
 
 
 gem 'bootstrap-sass'
-gem 'devise'
 gem "font-awesome-rails"
 gem 'foundation-rails'
+
+#회원관리 gem
 gem "authority"
 gem "devise"
 gem "rolify"
+
+#구글맵, 로봇인증
 gem 'gmaps4rails'
 gem 'recaptcha', require: "recaptcha/rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

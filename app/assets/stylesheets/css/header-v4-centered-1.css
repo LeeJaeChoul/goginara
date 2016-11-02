@@ -18,9 +18,6 @@
 /*Top Bar (login, search etc.)
 ------------------------------------*/
 .topbar-v1 {
-	background: rgba(95, 74, 11, 0.9);
-	border-top: solid 1px #f0f0f0;
-	border-bottom: solid 1px #f0f0f0;
 }
 
 /*Top Contacts*/
@@ -29,10 +26,6 @@
 }
 
 .topbar-v1 .top-v1-contacts li {
-	color: #fff;
-	font-size: 12px;
-	margin-right: 3px;
-	margin-top: 8px;
 }
 
 /*Top Data*/
@@ -42,20 +35,17 @@
 }
 
 .topbar-v1 .top-v1-data li {
-	color: #fff;
-	padding: 7px 11px;
-	margin-right: -4px;
+	color: rgb(95, 74, 11);
 	display: inline-block;
-	border-right: solid 1px #eee;
+	
 }
 
 .topbar-v1 .top-v1-data li a {
-	color: #fff;
 	font-size: 12px;
 }
 
 .topbar-v1 .top-v1-data li a:hover {
-	color: #F0EFEF;
+	color: rgba(95, 74, 11, 0.7);
 }
 
 .topbar-v1 .top-v1-data li i {
@@ -118,7 +108,6 @@
 
 .header-v4 .navbar-header {
 	float: none;
-	margin: 10px 0;
 }
 
 @media (max-width: 991px) {

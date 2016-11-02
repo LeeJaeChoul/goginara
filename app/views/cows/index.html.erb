@@ -11,7 +11,7 @@
     <div class="row">
       <% @cows.each do |cow| %>
       <div class="col-md-4 gogi-item" onClick="location.href='/cows/<%= cow.id %>'" style="cursor: pointer;">
-        <img class="img-responsive" src='<%= asset_path "gogi#{cow.id}.jpg" %>' alt="">
+        <img class="img-responsive" src='<%= asset_path "cow#{cow.id}.jpg" %>' alt="">
         <div class="item-information">
             <h3 class="product-name g-ml-10"><b><%= cow.title %></b></h3>
             <h4 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i><%= cow.price %></h3>

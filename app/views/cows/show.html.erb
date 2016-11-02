@@ -6,7 +6,7 @@
 			  <div><h1>상품 상세보기</h1><hr></div>
 				<div class="col-md-8 g-mb-50">
 				  <div>
-					  <img class="img-responsive" src='<%= asset_path "gogi#{@cow.id}.jpg" %>' alt="">
+					  <img class="img-responsive" src='<%= asset_path "cow#{@cow.id}.jpg" %>' alt="">
 				  </div>
 				</div>
 
@@ -29,6 +29,34 @@
 				  
 				</div>
 			</div><!--/end row--><hr>
+			<div class="text-center">
+				<h1><b>'고기나라'</b>는<br> 농협에서 직접 공수 한 1+등급의 한우를<br> <b class="item-text">한 번 더 직접 손질하여 기름기를 제거하고 최상의 상태로</b> <br>고객님들께 맛있는 고기를 제공하고자 노력하고 있습니다</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-responsive" style="width:100%;" src='<%= asset_path "cow#{@cow.id}.jpg" %>' alt="">
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive" src='<%= asset_path "cow-maker.jpg" %>' alt="">
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive" src='<%= asset_path "cow-maker2.jpg" %>' alt="">
+				</div>
+			</div><hr>
+			<div class="col-md-12">
+				<img class="img-responsive" src='<%= asset_path "cow-icon.png" %>' alt=""><hr>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<img class="img-responsive" src='<%= asset_path "deliver.jpg" %>' alt="">
+				</div>
+				<div class="col-md-6">
+					<h1>배송시 주의사항</h1>
+					<h3>1. content content content</h3>
+					<h3>1. content content content</h3>
+					<h3>1. content content content</h3>
+					<h3>1. content content content</h3>
+				</div>
 		</div>
 	</div>
 <%= render "layouts/footer" %>

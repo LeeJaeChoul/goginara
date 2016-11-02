@@ -114,3 +114,10 @@
 .border-box{
 	border: 1px solid #bbb;
 }
+
+.item-text {
+	color: #DD4621;
+}
+.information-img {
+	height: 500px;
+}

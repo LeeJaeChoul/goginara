@@ -1,5 +1,5 @@
 class CowsController < ApplicationController
-  before_action :set_cow, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [ :index, :show ]
 
   # GET /cows
   # GET /cows.json
@@ -10,6 +10,7 @@ class CowsController < ApplicationController
   # GET /cows/1
   # GET /cows/1.json
   def show
+    @cow = Cow.find(params[:id])
   end
 
   # GET /cows/new

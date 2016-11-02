@@ -6,25 +6,15 @@
 			<div class="topbar-v1">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6">
-							<ul class="list-inline top-v1-contacts">
-								<li>
-									<i class="fa fa-envelope"></i> 이메일: gokinara@naver.com
-								</li>
-								<li>
-									<i class="fa fa-phone"></i> 대표전화: 032-656-4150
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-md-6">
+						<div class="col-md-6 col-md-offset-6">
 							<ul class="list-inline top-v1-data">
 							  <% if user_signed_in? %>
-							  <li><%= current_user.email %></li>
-								<li><a href="#">장바구니</a></li>
+							  <li><%= current_user.email %></li> |
+								<li><a href="#">장바구니</a></li> |
+								<li><%= link_to "Roles : " + user_roles(current_user), '#' %></li>
 								<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "로그아웃 하시겠습니까?" } %></li>
 								<% else %>
-								<li><a href="/users/sign_in">로그인</a></li>
+								<li><a href="/users/sign_in">로그인</a></li> |
 								<li><a href="/users/sign_up">회원가입</a></li>
 								<% end %>
 							</ul>
