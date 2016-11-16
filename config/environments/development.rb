@@ -38,4 +38,15 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  #mailer setup JaeChoul
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = { 
+  #   :authentication => :plain,
+  #   :address => "smtp.mailgun.org",
+  #   :port => 587,
+  #   :domain => "sandboxc4cf00b9fc3042f783183d47b108452e.mailgun.org",
+  #   :user_name => "postmaster@sandboxc4cf00b9fc3042f783183d47b108452e.mailgun.org",
+  #   :password => "cfdad26e9a5a0b39e9de038e2c9efe3f"
+  # }
 end

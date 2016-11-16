@@ -9,7 +9,7 @@ gem 'foundation-rails'
 gem "authority"
 gem "devise"
 gem "rolify"
-
+gem 'letter_opener', group: :development
 #구글맵, 로봇인증
 gem 'gmaps4rails'
 gem 'recaptcha', require: "recaptcha/rails"

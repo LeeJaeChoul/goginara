@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @meat.category_id %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @meat.title %>
+</p>
+
+<p>
+  <strong>Maker:</strong>
+  <%= @meat.maker %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @meat.origin %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @meat.weight %>
+</p>
+
+<p>
+  <strong>Life:</strong>
+  <%= @meat.life %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @meat.price %>
+</p>
+
+<%= link_to 'Edit', edit_meat_path(@meat) %> |
+<%= link_to 'Back', meats_path %>
