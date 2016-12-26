@@ -179,7 +179,7 @@
 	border-top: none;
 	position: relative;
 	color: #fff;
-	background: #5F4A0B;
+	background: #443508;
 }
 
 /*Navbar Menu*/
@@ -638,7 +638,7 @@
 	position: fixed;
 	border-bottom: none;
 	box-shadow: 0 0 3px #bbb;
-	background: rgba(95, 74, 11, 0.7);
+	background: rgba(68, 53, 8, 0.8);
 	-webkit-transition: height 0.4s;
 	-moz-transition: height 0.4s;
 	transition: height 0.4s;

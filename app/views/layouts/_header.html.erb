@@ -1,33 +1,31 @@
 <div class="header-fixed header-fixed-space">
 	<div class="wrapper">
-		<!--=== Header v4 ===-->
 		<div class="header-v4">
-			<!-- Topbar -->
 			<div class="topbar-v1">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-6">
 							<ul class="list-inline top-v1-data">
 							  <% if user_signed_in? %>
-							  <li><%= current_user.email %></li> |
-								<li><a href="#">장바구니</a></li> |
-								<li><%= link_to "Roles : " + user_roles(current_user), '#' %></li>
-								<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "로그아웃 하시겠습니까?" } %></li>
+							    <li><%= current_user.email %></li> |
+							    <% if current_user.id == 1 %>
+							      <li>관리자페이지 |</li>
+							    <% else %>
+								    <li><a href="#">장바구니</a></li> |
+								  <% end %>
+								  <li><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "로그아웃 하시겠습니까?" } %></li>
 								<% else %>
-								<li><a href="/users/sign_in">로그인</a></li> |
-								<li><a href="/users/sign_up">회원가입</a></li>
+  								<li><a href="/users/sign_in">로그인</a></li> |
+  								<li><a href="/users/sign_up">회원가입</a></li>
 								<% end %>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- End Topbar -->
 
-			<!-- Navbar -->
 			<div class="navbar navbar-default mega-menu" role="navigation">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
 						<a class="navbar-brand" href="/">
 							<img id="logo-header" src='<%= asset_path "logo1.png" %>' alt="Logo">
@@ -46,67 +44,37 @@
 
 				<div class="clearfix"></div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				
 				<div class="collapse navbar-collapse navbar-responsive-collapse header-v4 header-sticky">
 					<div class="container">
 						<ul class="nav navbar-nav">
-							<!-- Home -->
 							<li>
-								<a href="/cows">
-									한우
+							  <%= link_to '한우', meats_path(category_id: 1) %>
+							</li>
+							<li>
+								<%= link_to '한돈', meats_path(category_id: 2) %>
+							</li>
+							<li>
+									<%= link_to '수입육', meats_path(category_id: 3) %>
 								</a>
 							</li>
-							<!-- End Home -->
-
-							<!-- Pages -->
 							<li>
-								<a href="/porks">
-									한돈
+									<%= link_to '양념육/캠핑세트', meats_path(category_id: 4) %>
 								</a>
 							</li>
-							<!-- End Pages -->
-
-							<!-- Blog -->
 							<li>
-								<a href="javascript:void(0);">
-									수입육
+									<%= link_to '이바지/선물세트', meats_path(category_id: 5) %>
 								</a>
 							</li>
-							<!-- End Blog -->
-
-							<!-- Portfolio -->
-							<li>
-								<a href="javascript:void(0);">
-									양념육/캠핑세트
-								</a>
-							</li>
-							<!-- End Portfolio -->
-
-							<!-- Features -->
-							<li>
-								<a href="javascript:void(0);">
-									이바지/선물세트
-								</a>
-							</li>
-							<!-- End Features -->
-
-							<!-- Shortcodes -->
 							<li>
 								<a href="/contact">
 									문의하기
 								</a>
 							</li>
-							<!-- End Shortcodes -->
-
-							<!-- Demo Pages -->
 							<li>
 								<a href="javascript:void(0);">
 									주문하기
 								</a>
 							</li>
-							<!-- End Demo Pages -->
-
 							<!-- Search Block -->
 							<!--<li class="no-border">-->
 							<!--	<i class="search fa fa-search search-btn"></i>-->
@@ -122,76 +90,9 @@
 							<!-- End Search Block -->
 						</ul>
 					</div>
-				</div><!--/navbar-collapse-->
-			
+				</div>
 			</div>
-			<!-- End Navbar -->
 		</div>
-		<!--=== End Header v4 ===-->
-	
-	<!--<div class="wrapper">-->
-	<!--	<div class="header-v6 header-classic-white header-sticky">-->
-			<!-- Navbar -->
-	<!--		<div class="navbar mega-menu" role="navigation">-->
-	<!--			<div class="container">-->
-	<!--			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">-->
-	<!--						<span class="sr-only">Toggle navigation</span>-->
-	<!--						<span class="icon-bar"></span>-->
-	<!--						<span class="icon-bar"></span>-->
-	<!--						<span class="icon-bar"></span>-->
-	<!--					</button>-->
-	<!--					<div class="navbar-brand">-->
-	<!--						<a href="/">-->
-	<!--							<img class="shrink-logo" src='<%= asset_path "logo2-default.png" %>' alt="Logo">-->
-	<!--						</a>-->
-	<!--					</div>-->
-					
-
-	<!--				<div class="collapse navbar-collapse navbar-responsive-collapse">-->
-	<!--					<div class="menu-container">-->
-	<!--						<ul class="nav navbar-nav">-->
-
-	<!--							<li class="dropdown">-->
-	<!--								<a href="javascript:void(0);" onClick="location.href='/cows'" class="dropdown-toggle" data-toggle="dropdown">-->
-	<!--									한우-->
-	<!--								</a>-->
-	<!--							</li>-->
-
-	<!--							<li class="dropdown">-->
-	<!--								<a href="javascript:void(0);" onClick="location.href='/porks'" class="dropdown-toggle" data-toggle="dropdown">-->
-	<!--									한돈-->
-	<!--								</a>-->
-	<!--							</li>-->
-
-	<!--							<li class="dropdown">-->
-	<!--								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">-->
-	<!--									수입육-->
-	<!--								</a>-->
-	<!--							</li>-->
-								
-	<!--							<li class="dropdown">-->
-	<!--								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">-->
-	<!--									캠핑/양념육-->
-	<!--								</a>-->
-	<!--							</li>-->
-								
-	<!--							<li class="dropdown">-->
-	<!--								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">-->
-	<!--									선물세트-->
-	<!--								</a>-->
-	<!--							</li>-->
-								
-	<!--							<li class="dropdown">-->
-	<!--								<a href="javascript:void(0);" onClick="location.href='/contact'" class="dropdown-toggle" data-toggle="dropdown">-->
-	<!--									주문하기-->
-	<!--								</a>-->
-	<!--							</li>-->
-	<!--						</ul>-->
-	<!--					</div>-->
-	<!--				</div>-->
-	<!--			</div>-->
-	<!--		</div>-->
-			<!-- End Navbar -->
-		</div>
-		</div>
+	</div>
+</div>
 		

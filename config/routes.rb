@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :categories 
     resources :meats
   
-  resources :cows
-  resources :porks
   get 'contact' => 'goginara#contact'
   get 'goginara/index'
   root "goginara#index"

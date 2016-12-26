@@ -18,13 +18,13 @@
 		<label class="input login-input g-mt-20">
 	      <div class="input-group">
 	      	<span class="input-group-addon"><i class="fa fa-check"></i></span>
-	      	<%= f.collection_select :category_id, Category.all, :id, :name, autofocus: true, class: "form-control", placeholder: "상품종류" %>
+	      	<%= f.collection_select :category_id, Category.all, :id, :name, {:include_blank => '상품 종류 선택'}, {:class => 'form-control'} %>
 	    	</div>
 	  	</label>
 			<label class="input login-input g-mt-20">
 	      <div class="input-group">
 	      	<span class="input-group-addon"><i class="fa fa-check"></i></span>
-	      	<%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "상품이름" %>
+	      	<%= f.text_field :title, autofocus: false, class: "form-control", placeholder: "상품이름" %>
 	    	</div>
 	  	</label>
 	  	<label class="input login-input g-mt-20">

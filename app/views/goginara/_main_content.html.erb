@@ -9,7 +9,7 @@
 <div class="row">
   <% @cow.meats.each do |meat| %>
   <% break if meat.id > 3 %>
-  <div class="col-md-4 gogi-item" onClick="location.href='/cows/<%= meat.id %>'" style="cursor: pointer;">
+  <div class="col-md-4 gogi-item" onClick="location.href='/meats/<%= meat.id %>'" style="cursor: pointer;">
     <img class="img-responsive" src='<%= asset_path "cow#{meat.id}.jpg" %>' alt="">
     <div class="item-information">
       <h2 class="product-name g-ml-10"><%= meat.title %></h2>
