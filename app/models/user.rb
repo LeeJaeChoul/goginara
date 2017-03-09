@@ -16,4 +16,16 @@ class User < ActiveRecord::Base
   #   add_role :user
   # end
 
+  # 새로운 주문 생성 ( box의 배열 )
+  def order(boxes)
+    return false if boxes.nil? || boxes.empty?
+    o = Order.new
+    o.user_id = self.id
+    o.save
+    boxes.each do |b|
+      b.order_id = o.id
+      b.save
+    end
+    o
+  end
 end
