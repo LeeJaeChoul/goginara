@@ -8,15 +8,22 @@
 <!-- Projects Row -->
 <div class="row">
   <% @cow.meats.each do |meat| %>
-  <% break if meat.id > 3 %>
-  <div class="col-md-4 gogi-item" onClick="location.href='/meats/<%= meat.id %>'" style="cursor: pointer;">
-    <img class="img-responsive" src='<%= asset_path "cow#{meat.id}.jpg" %>' alt="">
-    <div class="item-information">
-      <h2 class="product-name g-ml-10"><%= meat.title %></h2>
-      <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i><%= meat.price %></h3>
-    </div>
-  </div>
-  
+  <% break if meat.id > 4 %>
+  <div class="col-md-3" onClick="location.href='/meats/<%= meat.id %>'" style="cursor: pointer;">
+		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden">
+					<img class="img-responsive" src='<%= asset_path "cow1.jpg" %>' alt="">
+				</div>
+				<a class="btn-more hover-effect" href="/meats/<%= meat.id %>">자세히보기 +</a>
+			</div>
+			<div class="caption">
+				<h3 class="product-name g-ml-10"><%= meat.title %></h3>
+				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+			  <h3 class="g-mr-10 product-name" style="text-align:right"><%= meat.price %>원</h3>
+			</div>
+		</div>
+	</div>
   <% end %>
 </div><br>
 
@@ -29,16 +36,23 @@
 
 <!-- Projects Row -->
 <div class="row">
-  <% @pork.meats.each do |pork| %>
-  <% break if pork.id > 3 %>
-  <div class="col-md-4 gogi-item" onClick="location.href='/porks/<%= pork.id %>'" style="cursor: pointer;">
-    <img class="img-responsive" src='<%= asset_path "pork#{pork.id}.jpg" %>' alt="">
-    <div class="item-information">
-      <h2 class="product-name g-ml-10"><%= pork.title %></h2>
-      <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i><%= pork.price %></h3>
-    </div>
-  </div>
-  
+  <% @pork.meats.each do |meat| %>
+  <% break if meat.id > 4 %>
+  <div class="col-md-3" onClick="location.href='/meats/<%= meat.id %>'" style="cursor: pointer;">
+		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+			<div class="thumbnail-img">
+				<div class="overflow-hidden">
+					<img class="img-responsive" src='<%= asset_path "cow1.jpg" %>' alt="">
+				</div>
+				<a class="btn-more hover-effect" href="/meats/<%= meat.id %>">자세히보기 +</a>
+			</div>
+			<div class="caption">
+				<h3 class="product-name g-ml-10"><%= meat.title %></h3>
+				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+			  <h3 class="g-mr-10 product-name" style="text-align:right"><%= meat.price %>원</h3>
+			</div>
+		</div>
+	</div>
   <% end %>
 </div><br>
 <!-- /.row -->
@@ -50,35 +64,111 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                    <h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>19,900</h3>
-                </div>
-            </div>
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "camp2.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                    <h3 class="product-name g-ml-10">한돈 양념갈비 세트</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>29,900</h3>
-                </div>
-            </div>
-            <div class="col-md-4 gogi-item">
-                <a href="#">
-                    <img class="img-responsive" src='<%= asset_path "camp3.jpg" %>' alt="">
-                </a>
-                <div class="item-information">
-                    <h3 class="product-name g-ml-10">한돈 고추장삼겹살 세트</h3>
-                <h3 class="g-mr-10" style="text-align:right"><i class="fa fa-krw" aria-hidden="true"></i>29,900</h3>
-                </div>
-            </div>
-        </div>
-        
+          <div class="col-md-3" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-3" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-3" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-3" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
+          <div class="col-md-4" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4" style="cursor: pointer;">
+        		<div class="thumbnails thumbnail-style thumbnail-kenburn">
+        			<div class="thumbnail-img">
+        				<div class="overflow-hidden">
+        					<img class="img-responsive" src='<%= asset_path "camp1.jpg" %>' alt="">
+        				</div>
+        				<a class="btn-more hover-effect" href="#">자세히보기 +</a>
+        			</div>
+        			<div class="caption">
+        				<h3 class="product-name g-ml-10">캠핑 한판 세트</h3>
+        				<p>농협에서 납품 받은 1+등급의 한우를 내 가족이 먹는다는 생각으로 정성스럽게 손질하여 최상의 고기를 고객님들께 제공하고 있습니다.</p>
+        			  <h3 class="g-mr-10" style="text-align:right">30,000원</h3>
+        			</div>
+        		</div>
+        	</div>
 			<!--=== Product Service ===-->
 			<!--<div class="row g-mt-100">-->
 			<!--	<div class="col-md-4 product-service">-->

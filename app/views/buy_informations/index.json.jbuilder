@@ -1,0 +1,1 @@
+json.array! @buy_informations, partial: 'buy_informations/buy_information', as: :buy_information

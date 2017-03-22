@@ -6622,7 +6622,7 @@ a.thumbnail {
 	transition: all 0.8s ease-in-out;
 }
 .thumbnail-kenburn:hover img {
-	transform: scale(1.2) rotate(2deg);
+	transform: scale(1.2);
 }
 
 /*Servive Blocks

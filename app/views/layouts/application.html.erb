@@ -7,6 +7,9 @@
     <title><%= content_for?(:title) ? yield(:title) : "고기나라" %></title>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="//maps.google.com/maps/api/js?v=3.23&key=AIzaSyAowc9cyQqK4Ao1fI9ed342kvi85UcdOLo"></script>
+    
+    <!-- 주소검색 -->
+    
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Buy Informations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Address</th>
+      <th>Phonenumber</th>
+      <th>Email</th>
+      <th>Requirement</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buy_informations.each do |buy_information| %>
+      <tr>
+        <td><%= buy_information.user %></td>
+        <td><%= buy_information.address %></td>
+        <td><%= buy_information.phonenumber %></td>
+        <td><%= buy_information.email %></td>
+        <td><%= buy_information.requirement %></td>
+        <td><%= link_to 'Show', buy_information %></td>
+        <td><%= link_to 'Edit', edit_buy_information_path(buy_information) %></td>
+        <td><%= link_to 'Destroy', buy_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Buy information', new_buy_information_path %>

@@ -62,6 +62,7 @@
 	padding: 10px 25px;
 	width: 100%;
 	background: #5F4A0B;
+	color: #fff;
 }
 
 .btn-p-buy:hover {
@@ -123,4 +124,45 @@
 }
 .detail-text {
 	color: #5F4A0B;
+}
+
+/* product quantity */
+.quantity-button {
+	color: #555;
+	width: 55px;
+	height: 50px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	background: #eee;
+	text-align: center;
+	font-weight: normal;
+	white-space: nowrap;
+	display: inline-block;
+	background-image: none;
+}
+.product-quantity {
+	float: left;
+	margin-right: 30px;
+}
+.quantity-field {
+	width: 55px;
+	height: 50px;
+	outline: none;
+	margin: 0 -4px;
+	font-size: 20px;
+	text-align: center;
+	border: 1px solid #eee;
+}
+
+.buy_information{
+	border-top: 2px solid #5F4A0B;
+	vertical-align: middle;
+}
+
+.border-tb{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }

@@ -15,12 +15,12 @@
 	<div class="row text-center g-mt-20 g-mb-20">
 	  <div class="col-md-10 col-md-offset-1 border-box">
 		<h2>상품 등록하기</h2>
-		<label class="input login-input g-mt-20">
-	      <div class="input-group">
-	      	<span class="input-group-addon"><i class="fa fa-check"></i></span>
-	      	<%= f.collection_select :category_id, Category.all, :id, :name, {:include_blank => '상품 종류 선택'}, {:class => 'form-control'} %>
-	    	</div>
-	  	</label>
+			<label class="input login-input g-mt-20">
+		    <div class="input-group">
+		     	<span class="input-group-addon"><i class="fa fa-check"></i></span>
+		     	<%= f.collection_select :category_id, Category.all, :id, :name, {:include_blank => '상품 종류 선택'}, {:class => 'form-control'} %>
+		    </div>
+		  </label>
 			<label class="input login-input g-mt-20">
 	      <div class="input-group">
 	      	<span class="input-group-addon"><i class="fa fa-check"></i></span>
@@ -54,18 +54,18 @@
 	  	<label class="input login-input g-mt-20">
 	      <div class="input-group">
 	      	<span class="input-group-addon"><i class="fa fa-check"></i></span>
-	      	<%= f.text_field :price, autofocus: false, class: "form-control", placeholder: "가격" %>
+	      	<%= f.text_field :price, autofocus: false, class: "form-control", placeholder: "가격(중량당 가격)" %>
 	    	</div>
 	  	</label>
 	  	<div class="row g-mb-20 g-mt-20">
-  	  	<div class="col-md-6 actions">
-  	    	<%= f.submit "등록하기", class: "btn-u btn-devise g-mb-20" %>
-  	  	</div>
-  	  	<div class="g-mb-20 col-md-6">
-  	  	  <%= link_to '돌아가기', meats_path, class: "btn-u btn-devise g-mb-20" %>
-  	  	</div>
-  	  </div>
-	  </div>
+		  	<div class="col-md-6 actions">
+		    	<%= f.submit "등록하기", class: "btn-u btn-devise g-mb-20" %>
+		  	</div>
+		  	<div class="g-mb-20 col-md-6">
+		  	  <%= link_to '돌아가기', meats_path, class: "btn-u btn-devise g-mb-20" %>
+		  	</div>
+		  </div>
+		</div>
 	</div>
 	<% end %>
 <%= render "layouts/footer" %>

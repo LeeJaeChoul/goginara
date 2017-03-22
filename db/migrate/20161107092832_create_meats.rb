@@ -9,7 +9,7 @@ class CreateMeats < ActiveRecord::Migration
       t.string :weight, null: false
       t.string :life,   null: false
       t.string :price,  null: false
-
+      t.string :purpose
       t.timestamps null: false
     end
   end

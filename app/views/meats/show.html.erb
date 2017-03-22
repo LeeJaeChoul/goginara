@@ -18,14 +18,18 @@
 					</div>
 
 					<p>농협에서 구입한 1++ 등급의한우를<strong> 한 번 더 손질하여 </strong>기름기 적고 질 좋은 고기를 드리기 위해 고기나라는 항상 노력하고 있습니다.</p><br>
-          			<div class="g-mb-40">
+          <div class="g-mb-40">
 						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 제조사: <b><%= @meat.maker %></b></p>
 						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 원산지: <b><%= @meat.origin %></b></p>
 						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 유통기한: <b><%= @meat.life %></b></p>
 						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 수령방법: <b>택배 / 방문수령</b></p>
 						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 중량: <b><%= @meat.weight %></b></p>
-						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 가격: <b><%= @meat.price %>원</b></p>
-						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 배송비: <b>3,000원</b></p>
+						<p><i class="fa fa-check-square-o" aria-hidden="true"></i> 판매가: <b><%= @meat.price %>원</b></p>
+						<div class="product-quantity text-center col-sm-offset-3">
+						  <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty();' value='-'>-</button>
+							<input type='text' class="quantity-field" name='qty' value="1" id='qty'/>
+							<button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty").value++;' value='+'>+</button>
+						</div>
 					</div>
 					  <a href="#"><button type="button" class="btn-u btn-u-sea-shop btn-p-buy"><i class="fa fa-shopping-cart" aria-hidden="true"> 주문하기</i></button></a>
 				  

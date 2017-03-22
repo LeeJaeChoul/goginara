@@ -1,0 +1,1 @@
+json.partial! "buy_informations/buy_information", buy_information: @buy_information

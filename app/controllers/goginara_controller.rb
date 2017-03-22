@@ -11,6 +11,9 @@ class GoginaraController < ApplicationController
   end
   
   def contact
-    
+  end
+  
+  def buy
+    @meat = Meat.all
   end
 end

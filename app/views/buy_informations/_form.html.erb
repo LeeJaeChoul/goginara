@@ -1,0 +1,72 @@
+<div class="container">
+  <%= render "layouts/header" %>
+  <%= render "goginara/buy_product" %>
+  
+  <%= form_for(@buy_information) do |f| %>
+    <% if @buy_information.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@buy_information.errors.count, "error") %> prohibited this buy_information from being saved:</h2>
+        <ul>
+        <% @buy_information.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field g-mb-100 g-mt-50">
+      <h2><%= f.label :user, "주문하시는 분의 성함을 적어주세요." %>
+      <br><small class="text-muted">예) 홍길동</small></h2>
+      <%= f.text_field :user, class: "form-control farmmer_form" %>
+    </div>
+    <div class="field g-mb-100">
+      <div class="input-group">
+        <h2><%= f.label :postcodify_postcode, "우편번호를 검색해주세요" %>
+        <br><small class="text-muted">좌측 검색버튼을 눌러 동 혹은 군을 입력해주세요</small></h2>
+        <%= f.text_field :postcodify_postcode, class: "postcodify_postcode5 farmmer_form form-control", readonly: "" %>
+        <span class="input-group-btn">
+          <button class="btn-p-buy" type="button" id="postcodify_search_button">우편번호 검색하기</button>
+        </span>
+      </div><!-- /input-group -->
+    </div>
+    <div class="field g-mb-100">
+      <div class="input-group">
+        <h2><%= f.label :postcodify_address,  "도로명 주소" %>
+        <%= f.text_field :postcodify_address, class: "postcodify_postcode5 farmmer_form form-control", readonly: "" %>
+      </div><!-- /input-group -->
+    </div>
+    <div class="field g-mb-100">
+      <div class="input-group">
+        <h2><%= f.label :postcodify_details, "상세 주소" %>
+        <%= f.text_field :postcodify_details, class: "postcodify_postcode5 farmmer_form form-control", readonly: "" %>
+      </div><!-- /input-group -->
+    </div>
+    <div class="field g-mb-100">
+      <h2><%= f.label :phonenumber, "연락 가능한 연락처를 적어주세요" %>
+      <br><small class="text-muted">예) 010-1111-2222이면 01011112222입력</small></h2>
+      <%= f.text_field :phonenumber, class: "form-control farmmer_form" %>
+    </div>
+    <div class="field g-mb-100">
+      <h2><%= f.label :email, "이메일 주소를 적어주세요" %>
+      <br><small class="text-muted">예) abc@google.com</small></h2>
+      <%= f.text_field :email, class: "form-control farmmer_form" %>
+    </div>
+    <div class="field g-mb-100">
+      <h2><%= f.label :requirement, "배송시 요청사항을 적어주세요" %>
+      <br><small class="text-muted">예) 부재시 경비실에 맡겨주세요.</small></h2>
+      <%= f.text_field :requirement, class: "form-control farmmer_form" %>
+    </div>
+    
+  <% end %>
+  <%= render "layouts/footer" %>
+</div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<script> 
+$(function() { 
+  $("#postcodify_search_button").postcodifyPopUp(); 
+  $('#file').change(function() {
+    $('#image').val($(this).val());
+  });
+  }); 
+</script>
