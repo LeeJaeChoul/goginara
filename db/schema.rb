@@ -13,9 +13,22 @@
 
 ActiveRecord::Schema.define(version: 20170321042847) do
 
+  create_table "boxes", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.integer  "order_id"
+    t.boolean  "ordered",    default: false
+    t.integer  "number",     default: 1
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "boxes", ["order_id"], name: "index_boxes_on_order_id"
+  add_index "boxes", ["product_id"], name: "index_boxes_on_product_id"
+  add_index "boxes", ["user_id"], name: "index_boxes_on_user_id"
+
   create_table "buy_informations", force: :cascade do |t|
     t.string   "user",                null: false
-    t.string   "address",             null: false
     t.string   "phonenumber",         null: false
     t.string   "email",               null: false
     t.string   "requirement",         null: false
@@ -27,51 +40,47 @@ ActiveRecord::Schema.define(version: 20170321042847) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.integer  "user_id"
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "categories", ["user_id"], name: "index_categories_on_user_id"
-
-  create_table "cows", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "origin"
-    t.string   "weight"
-    t.string   "life"
-    t.string   "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "meats", force: :cascade do |t|
     t.integer  "category_id"
-    t.integer  "user_id"
     t.string   "title",       null: false
     t.string   "maker",       null: false
     t.string   "origin",      null: false
     t.string   "weight",      null: false
     t.string   "life",        null: false
     t.string   "price",       null: false
+    t.string   "purpose"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "meats", ["category_id"], name: "index_meats_on_category_id"
-  add_index "meats", ["user_id"], name: "index_meats_on_user_id"
 
-  create_table "porks", force: :cascade do |t|
-    t.string   "title"
-    t.string   "maker"
-    t.string   "origin"
-    t.string   "weight"
-    t.string   "life"
-    t.string   "price"
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "status",     default: "waiting"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
+
+  create_table "products", force: :cascade do |t|
+    t.integer  "meat_id"
+    t.string   "title",      null: false
+    t.string   "origin",     null: false
+    t.string   "weight",     null: false
+    t.string   "life",       null: false
+    t.string   "price",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "products", ["meat_id"], name: "index_products_on_meat_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
