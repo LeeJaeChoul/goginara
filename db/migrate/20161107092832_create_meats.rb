@@ -2,7 +2,7 @@ class CreateMeats < ActiveRecord::Migration
   def change
     create_table :meats do |t|
       t.references :category, index: true, foreign_key: true
-      # t.references :user, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
       t.string :title,  null: false
       t.string :maker,  null: false
       t.string :origin, null: false

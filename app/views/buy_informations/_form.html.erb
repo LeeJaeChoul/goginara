@@ -13,49 +13,46 @@
         </ul>
       </div>
     <% end %>
-    <div class="field g-mb-100 g-mt-50">
-      <h2><%= f.label :user, "주문하시는 분의 성함을 적어주세요." %>
-      <br><small class="text-muted">예) 홍길동</small></h2>
-      <%= f.text_field :user, class: "form-control farmmer_form" %>
+    <div class="row g-mt-100">
+      <h3 style="border-bottom: 1px solid #5F4A0B; width: 100%;">배송지 정보</h3>
+      <div class="field g-mb-20 g-mt-50">
+        <%= f.label :user, "받으시는분 " %>
+        <%= f.text_field :user %>
+      </div>
+      <div class="field g-mb-20">
+        <div class="input-group">
+          <%= f.label :postcodify_postcode, "주 소 " %>
+          <%= f.text_field :postcodify_postcode, class: "postcodify_postcode5", readonly: "" %>
+          <span>
+          <button type="button" id="postcodify_search_button">우편번호 검색하기</button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+      <div class="field g-mb-20">
+        <div class="input-group">
+          <%= f.label :postcodify_address,  "도로명 주소 " %>
+          <%= f.text_field :postcodify_address, class: "postcodify_address form-control", readonly: "" %>
+        </div><!-- /input-group -->
+      </div>
+      <div class="field g-mb-20">
+        <div class="input-group">
+          <%= f.label :postcodify_details, "상세 주소 " %>
+          <%= f.text_field :postcodify_details, class: "postcodify_details form-control" %>
+        </div><!-- /input-group -->
+      </div>
+      <div class="field g-mb-20">
+        <%= f.label :phonenumber, "연락처 " %>
+        <%= f.text_field :phonenumber %>
+      </div>
+      <div class="field g-mb-20">
+        <%= f.label :email, "이메일 주소 " %>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field g-mb-20">
+        <%= f.label :requirement, "배송시 요청사항을 적어주세요." %>
+        <%= f.text_field :requirement, class: "form-control" %>
+      </div>
     </div>
-    <div class="field g-mb-100">
-      <div class="input-group">
-        <h2><%= f.label :postcodify_postcode, "우편번호를 검색해주세요" %>
-        <br><small class="text-muted">좌측 검색버튼을 눌러 동 혹은 군을 입력해주세요</small></h2>
-        <%= f.text_field :postcodify_postcode, class: "postcodify_postcode5 farmmer_form form-control", readonly: "" %>
-        <span class="input-group-btn">
-          <button class="btn-p-buy" type="button" id="postcodify_search_button">우편번호 검색하기</button>
-        </span>
-      </div><!-- /input-group -->
-    </div>
-    <div class="field g-mb-100">
-      <div class="input-group">
-        <h2><%= f.label :postcodify_address,  "도로명 주소" %>
-        <%= f.text_field :postcodify_address, class: "postcodify_postcode5 farmmer_form form-control", readonly: "" %>
-      </div><!-- /input-group -->
-    </div>
-    <div class="field g-mb-100">
-      <div class="input-group">
-        <h2><%= f.label :postcodify_details, "상세 주소" %>
-        <%= f.text_field :postcodify_details, class: "postcodify_postcode5 farmmer_form form-control", readonly: "" %>
-      </div><!-- /input-group -->
-    </div>
-    <div class="field g-mb-100">
-      <h2><%= f.label :phonenumber, "연락 가능한 연락처를 적어주세요" %>
-      <br><small class="text-muted">예) 010-1111-2222이면 01011112222입력</small></h2>
-      <%= f.text_field :phonenumber, class: "form-control farmmer_form" %>
-    </div>
-    <div class="field g-mb-100">
-      <h2><%= f.label :email, "이메일 주소를 적어주세요" %>
-      <br><small class="text-muted">예) abc@google.com</small></h2>
-      <%= f.text_field :email, class: "form-control farmmer_form" %>
-    </div>
-    <div class="field g-mb-100">
-      <h2><%= f.label :requirement, "배송시 요청사항을 적어주세요" %>
-      <br><small class="text-muted">예) 부재시 경비실에 맡겨주세요.</small></h2>
-      <%= f.text_field :requirement, class: "form-control farmmer_form" %>
-    </div>
-    
   <% end %>
   <%= render "layouts/footer" %>
 </div>

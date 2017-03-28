@@ -126,6 +126,14 @@
 	color: #5F4A0B;
 }
 
+.border-tb {
+	border-top: 1px solid #5F4A0B;
+	border-bottom: 1px solid #5F4A0B;
+}
+
+.buy-form-control {
+	width:70%;
+}
 /* product quantity */
 .quantity-button {
 	color: #555;
@@ -155,14 +163,4 @@
 	font-size: 20px;
 	text-align: center;
 	border: 1px solid #eee;
-}
-
-.buy_information{
-	border-top: 2px solid #5F4A0B;
-	vertical-align: middle;
-}
-
-.border-tb{
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
 }
