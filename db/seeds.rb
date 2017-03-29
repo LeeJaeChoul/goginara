@@ -1,4 +1,4 @@
 Category.create!([
-  {name: "Cow"},
-  {name: "Pork"}
+  {name: "소고기"},
+  {name: "돼지고기"}
 ])

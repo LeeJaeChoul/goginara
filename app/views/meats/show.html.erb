@@ -8,7 +8,8 @@
 			  <div><h1>상품 상세보기</h1><hr></div>
 				<div class="col-md-8 g-mb-50">
 				  <div>
-					  <img class="img-responsive" src='<%= asset_path "cow#{@meat.id}.jpg" %>' alt="">
+					  <!-- <img class="img-responsive" src='<%#= asset_path "cow#{@meat.id}.jpg" %>' alt=""> -->
+            <img class="img-responsive" src='<%= asset_path "cow1.jpg" %>' alt="">
 				  </div>
 				</div>
 
@@ -32,7 +33,7 @@
 						</div>
 					</div>
 					  <a href="#"><button type="button" class="btn-u btn-u-sea-shop btn-p-buy"><i class="fa fa-shopping-cart" aria-hidden="true"> 주문하기</i></button></a>
-				  
+
 				</div>
 			</div><!--/end row--><hr>
 			<div class="row detail-text">
@@ -67,4 +68,3 @@
 	</div>
 <%= render "layouts/footer" %>
 </div>
-

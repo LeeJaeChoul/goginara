@@ -1,5 +1,5 @@
 class MeatsController < ApplicationController
-  authorize_actions_for Meat, only: [ :new, :create ]
+  # authorize_actions_for Meat, only: [ :new, :create ]
   before_action :set_category
   # GET /meats
   # GET /meats.json
@@ -8,9 +8,9 @@ class MeatsController < ApplicationController
       @meats = @category.meats
     else
       if params[:category_id] == '0'
-        @meats = Meat.uncategorized_posts
+        @meats = Meat.uncategorized_meats
       else
-        @meats = Meat.meats
+        @meats = Meat.all
       end
     end
     @category_name = params[:category_id] == '0' ? "Uncategorized" : (@category ? @category.name : "")
@@ -76,7 +76,8 @@ class MeatsController < ApplicationController
 
   private
     def set_category
-      @category = Category.find(params[:category_id]) if params[:category_id] && params[:category_id] != '0'
+      @category = Category.where(id: params[:category_id]).first if params[:category_id] && params[:category_id] != '0'
+      nil if @category.nil?
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_meat
