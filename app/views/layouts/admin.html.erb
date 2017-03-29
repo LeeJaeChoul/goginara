@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>관리자 페이지 - 고기나라 </title>
+
+  <%= javascript_include_tag "application" %>
+
+  <!-- favicon -->
+  <!-- <link rel="apple-touch-icon" sizes="120x120" href="/main/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/main/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/main/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/main/images/favicons/manifest.json">
+  <link rel="mask-icon" href="/main/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- Bootstrap -->
+  <link href="/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="/admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="/admin/vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="/admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="/admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="/admin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/uikit.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/dataTables.uikit.min.css">
+
+  <!-- <link rel="stylesheet" type="text/css" href="/admin/production/css/notify.css">
+  <link rel="stylesheet" type="text/css" href="/admin/production/css/prettify.css"> -->
+
+  <!-- PNotify -->
+  <link href="/admin/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+  <link href="/admin/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+  <link href="/admin/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="/admin/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+
+      <%#= render partial: 'admin/footer', layout: false %>
+
+      <!-- jQuery -->
+      <!-- <script src="/admin/vendors/jquery/dist/jquery.min.js"></script> -->
+      <!-- Bootstrap -->
+      <!-- <script src="/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
+      <!-- gauge.js -->
+      <script src="/admin/vendors/gauge.js/dist/gauge.min.js"></script>
+      <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+      <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/dataTables.uikit.min.js"></script>
+
+              <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                  <div class="navbar nav_title" style="border: 0;">
+                    <a href="/" class="site_title"><i class="fa fa-institution"></i> <span>고기나라</span></a>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <!-- menu profile quick info -->
+                  <div class="profile">
+                    <div class="profile_pic">
+                      <img src="/admin/production/images/guest.png" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                      <span>환영합니다,</span>
+                      <h2><strong>관리자</strong> 님</h2>
+                    </div>
+                  </div>
+                  <!-- /menu profile quick info -->
+
+                  <br />
+
+                  <%= render partial: 'admin/sidebar', layout: false %>
+
+                  <!-- /menu footer buttons -->
+                  <div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="Settings">
+                      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                      <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Lock">
+                      <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Logout">
+                      <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    </a>
+                  </div>
+                  <!-- /menu footer buttons -->
+                </div>
+              </div>
+
+                      <%= render partial: 'admin/nav', layout: false %>
+
+                      <!-- page content -->
+                      <div class="right_col" role="main">
+      <%= yield %>
+  </div>
+  <!-- /page content -->
+
+      <!-- FastClick -->
+      <script src="/admin/vendors/fastclick/lib/fastclick.js"></script>
+      <!-- NProgress -->
+      <script src="/admin/vendors/nprogress/nprogress.js"></script>
+      <!-- Chart.js -->
+      <script src="/admin/vendors/Chart.js/dist/Chart.min.js"></script>
+
+      <!-- bootstrap-progressbar -->
+      <script src="/admin/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+      <!-- iCheck -->
+      <script src="/admin/vendors/iCheck/icheck.min.js"></script>
+      <!-- Skycons -->
+      <script src="/admin/vendors/skycons/skycons.js"></script>
+      <!-- Flot -->
+      <script src="/admin/vendors/Flot/jquery.flot.js"></script>
+      <script src="/admin/vendors/Flot/jquery.flot.pie.js"></script>
+      <script src="/admin/vendors/Flot/jquery.flot.time.js"></script>
+      <script src="/admin/vendors/Flot/jquery.flot.stack.js"></script>
+      <script src="/admin/vendors/Flot/jquery.flot.resize.js"></script>
+      <!-- Flot plugins -->
+      <script src="/admin/production/js/flot/jquery.flot.orderBars.js"></script>
+      <script src="/admin/production/js/flot/date.js"></script>
+      <script src="/admin/production/js/flot/jquery.flot.spline.js"></script>
+      <script src="/admin/production/js/flot/curvedLines.js"></script>
+      <!-- JQVMap -->
+      <script src="/admin/vendors/jqvmap/dist/jquery.vmap.js"></script>
+      <script src="/admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+      <script src="/admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+      <!-- bootstrap-daterangepicker -->
+      <script src="/admin/production/js/moment/moment.min.js"></script>
+      <script src="/admin/production/js/datepicker/daterangepicker.js"></script>
+
+      <script src="/admin/vendors/switchery/dist/switchery.min.js"></script>
+
+      <!-- <script src="/admin/production/js/notify.js"></script>
+      <script src="/admin/production/js/prettify.js"></script> -->
+
+      <!-- PNotify -->
+      <script src="/admin/vendors/pnotify/dist/pnotify.js"></script>
+      <script src="/admin/vendors/pnotify/dist/pnotify.buttons.js"></script>
+      <script src="/admin/vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+      <!-- Custom Theme Scripts -->
+      <script src="/admin/build/js/custom.min.js"></script>
+
+      <% if flash[:error] %>
+        <script type="text/javascript">
+        $(document).ready(function() {
+          new PNotify({
+                          title: 'Error',
+                          text: '<%= flash[:error] %>',
+                          type: 'error',
+                          styling: 'bootstrap3'
+                      });
+        });
+        </script>
+      <% end %>
+
+      <% if flash[:alert] %>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            new PNotify({
+                            title: 'Success',
+                            text: '<%= flash[:alert] %>',
+                            type: 'success',
+                            styling: 'bootstrap3'
+                        });
+          });
+        </script>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>

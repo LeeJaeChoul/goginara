@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20170321042847) do
 
   create_table "meats", force: :cascade do |t|
     t.integer  "category_id"
+    t.integer  "user_id"
     t.string   "title",       null: false
     t.string   "maker",       null: false
     t.string   "origin",      null: false
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20170321042847) do
   end
 
   add_index "meats", ["category_id"], name: "index_meats_on_category_id"
+  add_index "meats", ["user_id"], name: "index_meats_on_user_id"
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
@@ -104,6 +106,9 @@ ActiveRecord::Schema.define(version: 20170321042847) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "role",                   default: 1
+    t.string   "name",                   default: ""
+    t.string   "contact",                default: ""
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

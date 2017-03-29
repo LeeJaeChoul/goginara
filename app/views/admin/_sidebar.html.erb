@@ -1,0 +1,39 @@
+<!-- sidebar menu -->
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+  <div class="menu_section">
+    <h3>General</h3>
+    <ul class="nav side-menu">
+      <li>
+        <a href="/admin"><i class="fa fa-home"></i> Home </a>
+      </li>
+      <li><a><i class="fa fa-bar-chart-o"></i> 통계 <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="/admin/stat/view">방문자 통계</a></li>
+          <li><a href="/admin/stat/post">게시글 통계</a></li>
+          <li><a href="/admin/stat/reply">덧글 통계</a></li>
+        </ul>
+      </li>
+      <li><a><i class="fa fa-user"></i> 유저 관리 <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="/admin/user">유저 조회 및 관리</a></li>
+          <!-- <li><a href="/admin/user_setting">기타 설정</a></li> -->
+        </ul>
+      </li>
+      <li><a><i class="fa fa-desktop"></i> 화면 관리 <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="/admin/view/main">메인 화면</a></li>
+          <!-- <li><a href="/admin/view/main_menu">메인 메뉴</a></li> -->
+        </ul>
+      </li>
+      <li><a><i class="fa fa-edit"></i> 게시판 설정 <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+            <li><a href="/admin/board"><i class="fa fa-plus-circle"></i>게시판 생성</a></li>
+            <%# Board.all.each do |b| %>
+                <!-- <li><a href="/admin/board/<%#= b.id %>"><%#= b.title %> 게시판</a></li> -->
+            <%# end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /sidebar menu -->
